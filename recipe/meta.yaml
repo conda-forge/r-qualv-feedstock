@@ -28,6 +28,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-kernsmooth
@@ -43,7 +44,7 @@ test:
 
 about:
   home: http://qualV.R-Forge.R-Project.org/
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Qualitative methods for the validation of dynamic models. It contains (i) an orthogonal set of deviance measures for absolute, relative and ordinal scale and (ii) approaches accounting for time shifts. The first approach transforms time to take time delays and speed differences into account. The second divides
     the time series into interval units according to their main features and finds the longest common subsequence (LCS) using a dynamic programming algorithm.
   license_family: GPL2
