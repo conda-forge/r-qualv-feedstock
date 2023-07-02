@@ -1,4 +1,4 @@
-{% set version = "0.3-4" %}
+{% set version = "0.3-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qualV_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qualV/qualV_{{ version }}.tar.gz
-  sha256: ab10da9f4b330364951ea000aaa35f2b4a7ca0945586615869a80428d4fe7266
+  sha256: e60825afab3de2b1cb257c55dfc380d1448962e429df180b2add104752771827
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
